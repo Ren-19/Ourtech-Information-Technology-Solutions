@@ -5,12 +5,9 @@ import { NAV_LINKS } from '../utils/constants';
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
-  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-
       const sections = NAV_LINKS.map((link) => document.getElementById(link.id));
       const scrollPosition = window.scrollY + 100;
 
