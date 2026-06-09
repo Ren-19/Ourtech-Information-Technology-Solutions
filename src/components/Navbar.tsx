@@ -37,32 +37,13 @@ function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-dark-900/95 backdrop-blur-md border-b border-dark-700/50 shadow-lg'
-          : 'bg-transparent'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-dark-950 border-b border-dark-700/50 shadow-lg"
       role="navigation"
       aria-label="Main navigation"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <button
-            onClick={() => scrollToSection('hero')}
-            className="flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded"
-            data-testid="navbar-logo"
-            aria-label="Go to top"
-          >
-            <img
-              src="/Ourtech enhanced logo.png"
-              alt=""
-              className="w-8 h-8 object-contain"
-            />
-            <span className="text-xl md:text-2xl font-bold gradient-text">OURTECH</span>
-          </button>
-
-          {/* Desktop Navigation */}
+        <div className="flex items-center justify-center h-16 md:h-20">
+          {/* Desktop Navigation — Centered */}
           <div className="hidden md:flex items-center gap-1" role="menubar">
             {NAV_LINKS.map((link) => (
               <button
