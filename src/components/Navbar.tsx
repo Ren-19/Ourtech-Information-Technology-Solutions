@@ -54,6 +54,11 @@ function Navbar() {
             data-testid="navbar-logo"
             aria-label="Go to top"
           >
+            <img
+              src="/Ourtech enhanced logo.png"
+              alt=""
+              className="w-8 h-8 object-contain"
+            />
             <span className="text-xl md:text-2xl font-bold gradient-text">OURTECH</span>
           </button>
 
