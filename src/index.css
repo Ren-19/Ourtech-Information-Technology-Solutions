@@ -11,6 +11,10 @@
     @apply bg-dark-950 text-white;
   }
 
+  section[id] {
+    scroll-margin-top: 80px;
+  }
+
   ::selection {
     @apply bg-primary-500/30 text-white;
   }

@@ -15,7 +15,9 @@ function Hero() {
   const scrollToServices = () => {
     const element = document.getElementById('services');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const navbarHeight = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: elementPosition - navbarHeight, behavior: 'smooth' });
     }
   };
 
@@ -244,7 +246,14 @@ function Hero() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => {
+                const el = document.getElementById('contact');
+                if (el) {
+                  const navbarHeight = 80;
+                  const pos = el.getBoundingClientRect().top + window.scrollY;
+                  window.scrollTo({ top: pos - navbarHeight, behavior: 'smooth' });
+                }
+              }}
                 className="px-8 py-4 border-2 border-gray-300 hover:border-primary-500 text-gray-700 hover:text-primary-600 font-semibold rounded-xl transition-colors"
                 data-testid="hero-cta-contact"
               >

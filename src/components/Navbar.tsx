@@ -27,7 +27,9 @@ function Navbar() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const navbarHeight = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: elementPosition - navbarHeight, behavior: 'smooth' });
       setIsOpen(false);
     }
   };
