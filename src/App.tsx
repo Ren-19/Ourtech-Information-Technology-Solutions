@@ -8,22 +8,26 @@ import Clients from './components/Clients';
 import WhyPartner from './components/WhyPartner';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import TechBackground from './components/TechBackground';
 
 function App() {
   return (
-    <div className="min-h-screen bg-dark-950">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <ValueProposition />
-        <Services />
-        <Certifications />
-        <Clients />
-        <WhyPartner />
-        <Contact />
-      </main>
-      <Footer />
+    <div className="min-h-screen relative">
+      <TechBackground />
+      <div className="relative z-10">
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <ValueProposition />
+          <Services />
+          <Certifications />
+          <Clients />
+          <WhyPartner />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }

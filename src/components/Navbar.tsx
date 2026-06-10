@@ -36,7 +36,7 @@ function Navbar() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 bg-dark-950 border-b border-dark-700/50 shadow-lg"
+      className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-xl border-b border-orange-500/10 shadow-[0_4px_30px_rgba(255,168,0,0.05)]"
       role="navigation"
       aria-label="Main navigation"
     >
